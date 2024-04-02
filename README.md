@@ -1,1 +1,2 @@
 # Art-Gallery-Management-System
+Art Gallery Management System is essentially an application that allows galleries to maintain a record of their day-to-day proceedings. This involves storing information about the artworks in their custody, artists under their label, collections showcased in the gallery, the sellers, buyers, visitors, patrons associated with their gallery, curators and general staff working for the gallery, exhibitions hosted, collaborative projects, affiliated institutes, branches, as well as details required by the PR&M department.
