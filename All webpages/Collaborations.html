@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborations | SA Cultural Centre</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 25px;
+        }
+        h1, h2 {
+            color: #fff;
+            margin: 0;
+        }
+        .container {
+            color: #fff;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .collaboration {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .collaboration h2, .collaboration p {
+            color: #fff;
+            margin: 0;
+            padding: 10px;
+        }
+        ul {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    margin:10px;
+    padding: 10px;
+    overflow: hidden;
+    background-color: rgba(107, 106, 106, 0.259);
+}
+
+#list {
+    float: left;
+}
+
+li a{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    padding:14px 16px;
+    text-decoration: none;
+    transition: all 0.3s ;
+  }
+
+li a:hover{
+    background-color: rgb(255, 149, 0);
+    transform: translateY(-10px);
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <ul>
+          <li id="list"><a href="/Layout.html">Home</a></li>
+          
+        </ul>
+    </section>
+    <header>
+        <h1>Collaborations</h1>
+        <h2>Exploring the Intersection of Art</h2>
+    </header>
+    <div class="container">
+        <div class="collaboration" style="background-image: url('vvc.jpg');">
+            <h2>Remebering Vincent Van Gogh</h2>
+            <p>Sydney Art House</p>
+        </div>
+        <div class="collaboration" style="background-image: url('fc.jpg');">
+            <h2>Self-Portraits</h2>
+            <p>Urban Art Festival</p>
+        </div>
+        <div class="collaboration" style="background-image: url('louvre.jpg');">
+            <h2>The Lourve</h2>
+            <p>X Renditions</p>
+        </div>
+    </div>
+</body>
+</html>

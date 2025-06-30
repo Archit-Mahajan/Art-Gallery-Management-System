@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | SA Cultural Centre</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #fff;
+            margin: 0;
+        }
+        .container {
+            color: #fff;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .collection {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .collection h2, .collection p {
+            color: #fff;
+            margin: 0;
+            padding: 10px;
+        }
+        ul {
+            font-family: Arial, Helvetica, sans-serif;
+            list-style-type: none;
+            margin: 10px;
+            padding: 10px;
+            overflow: hidden;
+            background-color: rgba(107, 106, 106, 0.259);
+        }
+
+        #list {
+            float: left;
+        }
+
+        #list a {
+            display: block;
+            color: aliceblue;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        #list a:hover {
+            background-color: rgb(255, 149, 0);
+            transform: translateY(-10px);
+        }
+
+       
+    </style>
+</head>
+<body ng-app="galleryApp" ng-controller="GalleryController">
+    <section>
+        <ul>
+            <li id="list"><a href="/Layout.html">Home</a></li>
+           
+        </ul>
+    </section>
+    
+    <header>
+        <h1>Collections</h1>
+        <h2>Discover Our Diverse Collections</h2>
+    </header>
+    <div class="container">
+        <a ng-href="{{collection.link}}" class="collection" ng-repeat="collection in collections" ng-style="{'background-image': 'url({{collection.imageUrl}})'}">
+            <h2>{{collection.title}}</h2>
+            <p>{{collection.summary}}</p>
+        </a>
+    </div>    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+angular.module('galleryApp', [])
+.controller('GalleryController', function($scope) {
+    $scope.collections = [
+        { 
+            title: 'Ram Kumar',
+            summary: 'Abstract Landscapes, usually in oil or acrylic',
+            imageUrl: '/Images/ram_kumar1.jpg',
+            link: 'ram_kumar_collection.html'
+        },
+        { 
+            title: 'Sunil Gupta',
+            summary: 'Merging cultural activism and photography',
+            imageUrl: '/Images/sunil_gupta1.jpg',
+            link: 'sunil_gupta_collection.html'
+        },
+        { 
+            title: 'Zaam Arif',
+            summary: 'Crossover of South Asian and Western culture, literature, and philosophy',
+            imageUrl: '/Images/zaam_arif1.jpg',
+            link: 'zaam_arif_collection.html'
+        }
+    ];
+});
+
+    </script>
+</body>
+</html>

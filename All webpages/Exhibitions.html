@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Exhibitions | SA Cultural Center</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("Artists/exhibition_image.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        }
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #fff;
+            margin: 0;
+        }
+        .container {
+            color: #fff;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .exhibition-info {
+            margin-top: 0px;
+        }
+        .exhibition-info p {
+            line-height: 3;
+        }
+        .exhibition-image {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .countdown {
+            text-align: center;
+            margin-top: 20px;
+        }
+        ul {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    line-height: 2;
+}
+
+#list {
+    float: left;
+}
+
+
+
+p{
+    color: rgb(255, 255, 255);
+}
+li a{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    padding:14px 16px;
+    text-decoration: none;
+    transition: all 0.3s ;
+  }
+
+li a:hover{
+    background-color: rgb(255, 149, 0);
+    transform: translateY(-10px);
+}
+
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <ul>
+          <li id="list"><a href="/Layout.html">Home</a></li>
+          
+        </ul>
+    </section>
+    <header>
+        <h1>Upcoming Exhibitions</h1>
+        <h2>Discover the Beauty of Art</h2>
+    </header>
+    <div class="container">
+        <div class="exhibition-info">
+            <h2>Sculpted Dreams</h2>
+            <p>Date: 20 April, 2024</p>
+            <p>Location: SA Art Gallery, Mumbai</p>
+            <p>Description: Exploring Modern Art.</p>
+        </div>
+        <div class="exhibition-info">
+            <h2>Featured Artists</h2>
+            <ul>
+                <li>Sakshi Gupta</li>
+                <li>Sunil Gupta</li>
+                <li>Ram Kumar</li>
+            </ul>
+        </div>
+        <div class="exhibition-info">
+            <h2>Additional Information</h2>
+            <p>For more details and inquiries, please contact us at [gallery email] or call [gallery phone number].</p>
+        </div>
+        <div class="countdown" id="countdown"></div>
+    </div>
+
+    <script>
+        const exhibitionDate = new Date('April 20, 2024').getTime();
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = exhibitionDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById('countdown').innerHTML = 'EXHIBITION HAS STARTED!';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

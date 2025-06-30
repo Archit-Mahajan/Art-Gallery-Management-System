@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: black;
+    color: white; 
+}
+
+.artist-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white; 
+}
+
+.artist-link img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.artist-link span {
+    font-size: 18px;
+}
+
+#artist-info {
+    display: none;
+    padding: 20px;
+    background-color: black; 
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+#artist-info img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+ul {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    background-color: rgba(107, 106, 106, 0.259);
+}
+
+#list {
+    float: left;
+}
+
+li a{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    padding:14px 16px;
+    text-decoration: none;
+    transition: all 0.3s ;
+  }
+
+li a:hover{
+    background-color: rgb(255, 149, 0);
+    transform: translateY(-10px);
+}
+</style>
+</head>
+<body>
+    <section>
+        <ul>
+          <li id="list"><a href="/Layout.html">Home</a></li>
+        </ul>
+    </section>
+
+    <ol>
+        <li>
+            <a href="#" class="artist-link" data-artist="Sunil">
+                <img src="/Images/SunilGupta.webp" alt="Sunil Gupta">
+                <span>Sunil Gupta</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="artist-link" data-artist="Ram">
+                <img src="/Images/ram_kUMAR.jpg" alt="Ram Kumar">
+                <span>Ram Kumar</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="artist-link" data-artist="Arpita">
+                <img src="/Images/arpita-singh-.jpg" alt="Arpita Singh">
+                <span>Arpita Singh</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="artist-link" data-artist="Sakshi">
+                <img src="/All webpages/Artists/image7.jpg" alt="Sakshi Gupta">
+                <span>Sakshi Gupta</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="artist-link" data-artist="Zaam">
+                <img src="/Images/Zaam Arif.webp" alt="Zaam Arif">
+                <span>Zaam Arif</span>
+            </a>
+        </li>
+    </ol>
+
+    <div id="artist-info"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

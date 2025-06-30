@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> SA Cultural Center</title>
+</head>
+<style>
+  ul{
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    overflow:hidden;
+    background-color:rgba(107, 106, 106, 0.259) ;
+  }
+  li{
+    float: left;
+  }
+  li a{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    padding:14px 16px;
+    text-decoration: none;
+    transition: all 0.3s ;
+  }
+  li a:hover{
+    background-color: rgb(255, 149, 0);
+    transform: translateY(-10px);
+  }
+  #image{
+    float:right;
+    height:800px;
+    width:600px;
+  }
+
+  @keyframes typing {
+  from { width: 0%; }
+  to { width: 60%; }
+}
+
+
+
+
+  h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100pt;
+    overflow: hidden; 
+    white-space: nowrap;
+    margin: 0;
+    animation: typing 4.9s;
+  }
+
+  h2{
+    font-family:'Times New Roman', Times, serif;
+    font-size:50pt;
+    font-weight: lighter;
+  }
+  h1,h2{
+    color: white;
+    text-align: center;
+    
+
+  }
+  #cont{
+    padding:150px;
+  }
+  footer {
+    text-align: center;
+    background-color: #151515;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  #li2{
+    float: right;
+  }
+  #li3{
+    float: right;
+  }
+
+</style>
+
+<body style="background-color: rgb(0, 0, 0);">
+  <section>
+    <ul>
+      <li id = "list"><a href = "./Layout.html">Home</a></li>
+      <li id = "list"><a href = "./All webpages/Gallery.html">Gallery</a></li>
+      <li id = "list"><a href = "./All webpages/Artists.html">Artists</a></li>
+      <li id = "list"><a href = "./All webpages/Collections.html">Collections</a></li>
+      <li id = "list"><a href = "/All webpages/Exhibitions.html">Exhibitions</a></li>
+      <li id = "list"><a href = "./All webpages/Collaborations.html">Collaborations</a></li>
+      <li id = "list"><a href = "./All webpages/Branches .html">Branches</a></li>
+      <li id = "list"><a href = "./All webpages/Affiliations.html">Affiliations</a></li>
+      <li id = "li2"><a href = "./Registration/Login.html">Log in</a></li>
+      <li id = "li3"><a href = "./Registration/signup.html">Sign up</a></li>
+      <li id = "list"><a href = "http://localhost:4000/">User Details</a></li>
+    </ul>
+  </section>
+  
+  <section>
+    <img id ="image" class="container2" src = "ThugSkull.jpg">
+    <div id = "cont">
+      <h1 class ="container"><b style="color: rgb(255, 149, 0);;">SA</b> Cultural Center</h1>
+      <h2>Art Gallery</h2>
+    </div>
+  </section>
+
+  <footer>
+    <p style="color: rgb(255, 255, 255);">copyright 2024 <B>SNEHA ARCHIT CULTURAL Center</B>.All rights reserved</p>
+  </footer>
+
+</body>
+
+</html>

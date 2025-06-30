@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA Cultural Centre</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            line-height: 1.5;
+            background: #000000;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .main {
+            background-color: rgba(107, 106, 106, 0.259);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            transition: transform 0.2s;
+            width: 500px;
+            text-align: center;
+            margin-top: 20px; /* Adjust top margin to give space for navigation */
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        label {
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            text-align: left;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            background-color: #4CAF50;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/Registration/Login.html">Log in</a></li>
+        <li><a href="/Registration/signup.html">Sign up</a></li>
+    </ul>
+    <div class="main">
+        <h1>SA Cultural Centre</h1>
+        <h3 style="color: white;">Enter your login credentials</h3>
+        <form id="loginForm" action="/login" method="POST">
+            <label for="user_email_address">Email Address:</label>
+            <input type="email" id="user_email_address" name="user_email_address" placeholder="Enter your Email Address" required>
+ 
+            <label for="user_password">Password:</label>
+            <input type="password" id="user_password" name="user_password" placeholder="Enter your Password" required>
+ 
+            <div class="wrap">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <% if (typeof error !== 'undefined') { %>
+            <p style="color: red;"><%= error %></p>
+        <% } %>
+        <p style="color: #ffffff;">Not registered? 
+              <a href="/Registration/signup.html" style="color: #ffffff;">Create an account</a>
+        </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
